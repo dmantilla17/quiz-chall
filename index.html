@@ -9,20 +9,49 @@
 <body>
     <header>
         <h1>Coding Quiz!</h1>
-        <button id="start">Start</button>
+        <button onclick="start()">Start</button>
          </header>
          
          <main>
             <section id="quiz">
-            <h2 id="question"></h2>
+                <h2 id="question">Which of the following represents true or false in an array?</h2>
+                   <div id="answers">
+                   <button id="answer1">String</button>
+                   <button id="answer2">Booleans</button>
+                   <button id="answer3">Alerts</button>
+                   <button id="answer4">Numbers</button>
+                   </section>
+                   </main>
+                </div>
+                <section id="quiz">
+            <h2 id="question">A very useful tool used during development and debugging for printing content to the debugger is</h2>
            <div id="answers">
-           <button id="answer1"></button>
-           <button id="answer2"></button>
-           <button id="answer3"></button>
-           <button id="answer4"></button>
+           <button id="answer1">terminal/bash</button>
+           <button id="answer2">for loops</button>
+           <button id="answer3">console.log</button>
+           <button id="answer4">javascript</button>
          </div>
         </section>
+        <section id="quiz">
+        <h2 id="question">String values must be enclosed within ___ when being assigned to variables.</h2>
+           <div id="answers">
+           <button id="answer1">Curly Brackets</button>
+           <button id="answer2">Commas</button>
+           <button id="answer3">Quotes</button>
+           <button id="answer4">Paraenthesis</button>
+           </section>
+        </div>
         </main>
+    
+        <div id="timer">
+            <h3><span id="timer">80</span>seconds left</h3>
+            <button on click="start()">Start</button>
+        </div id="scores">
+        <h2>All Done</h2>
+        <h3 id="high-scores">High Scores</h3>
+     <div>
+
+     </div>
     <script src="script.js"></script>
 </body>
 </html>

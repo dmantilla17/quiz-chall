@@ -5,7 +5,7 @@ var quiz=document.querySelector('#quiz');
 var question1= document.querySelector("#question-1");
 var question2= document.querySelector("#question-2");
 var question3= document.querySelector("#question-3");
-var timeLeft=document.querySelector("#time-left");
+var timerEL=document.querySelector("#timer");
 var wrongAnswer=document.querySelector("#wrong-answer");
 var correctAnswer=document.querySelector("#right-answer");
 //Data 
@@ -33,9 +33,38 @@ var question3={
 //answer choices with 4 options
 //the right or wrong questions 
 //FUNCTIONS
-//Question1.answers[questionNumber] -- text content
+question1.answers(questionNumber)[0];{
+if (question1===['1']){
+    correctAnswer();
+} else wrongAnswer();
+}
+function startTimer() {
+    console.log('Timer started');
+    var timeLeft= 80;
+    timerEL.textContent= timeLeft;
+
+
+    var timerInterval=setInterval(function() {
+        timeLeft--;
+        timerEL.textContent= timeLeft;
+        if (timeLeft===0){
+            clearInterval(timerInterval);
+            losses++;
+            displayLoss();
+        }else {
+            if(didUserwin){
+                clearInterval(timerInterval);
+                wins++;
+                displayWin();
+            }
+        }
+    },1000);
+
+}
+
 //indexNumber var--can determine what the answer is 
 //if you hit the right answer the number goes up
+
 function startQuiz() {
     console.log('Starting game');
 }
