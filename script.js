@@ -2,43 +2,50 @@
 //start button
 var startButton= document.querySelector("#start");
 var quiz=document.querySelector('#quiz');
-var question1= document.querySelector("#question-1");
-var question2= document.querySelector("#question-2");
-var question3= document.querySelector("#question-3");
+var questions= document.querySelector("#questions");
 var timerEL=document.querySelector("#timer");
 var wrongAnswer=document.querySelector("#wrong-answer");
 var correctAnswer=document.querySelector("#right-answer");
 //Data 
-var questionNumber=0
-var question1={
-    text: "Which of the following represents true or false in an array?:",
-    answers: ["Strings","Booleans","Alerts","Numbers"],
-    correctAnswer:"Booleans", 
+var secondsLeft=75;
+var questionsNumber=0
+var questions=[
+    {
+    questionText: "Which of the following represents true or false in an array?:",
+    answers= ["Strings","Booleans","Alerts","Numbers"],
+    correctAnswer= "Booleans", 
+}:
+var questionText={
+    text: "A very useful tool used during development and debugging for printing content to the debugger is:",
+    answers=["terminal/bash","for loops","console.log","Javascript"],
+    correctAnswer= "Javascript",
 };
-var question2={
-    text: "A very useful toool used during development and debugging for printing content to the debugger is:",
-    answers:["terminal/bash","for loops","console.log","Javascript"],
-    correctAnswer: "Javascript",
-};
-var question3={
-    text:"String values must be enclosed within ___ when being assigned to variables.",
-    answers:["Curly Brackets","Commas","Quotes","Parenthesis"],
-    correctAnswer:"Quotes",
-};
+var questionText={
+    text="String values must be enclosed within ___ when being assigned to variables.",
+    answers=["Curly Brackets","Commas","Quotes","Parenthesis"],
+    correctAnswer="Quotes",
+},
+];
 
-//alerts
-//questions for the survey
-//3 questions 
-
-//answer choices with 4 options
-//the right or wrong questions 
 //FUNCTIONS
+function startTimer(){
+    console.log('Timer started');}
+    timerInterval=setInterval(function() {
+        secondsLeft=80;
+        secondsLeft+ "seconds left";
+        if(secondsLeft===0){
+            clearInterval(timerInterval);
+        }
+    
+    });1000
+
 question1.answers(questionNumber)[0];{
 if (question1===['1']){
     correctAnswer();
 } else wrongAnswer();
 }
-function startTimer() {
+
+ function startTimer(){
     console.log('Timer started');
     var timeLeft= 80;
     timerEL.textContent= timeLeft;
@@ -68,11 +75,11 @@ function startTimer() {
 function startQuiz() {
     console.log('Starting game');
 }
-var question1= getquestion1()
 //start timer
 function startTimer(){
     console.log('Timer started');
 }
+function
 //present a question
 //end timer
 //if not answered then imcomplete then error
