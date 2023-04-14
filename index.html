@@ -1,57 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style.css" />
     <title>Coding quiz</title>
-</head>
-<body>
-    <header>
-        <h1>Coding Quiz!</h1>
-        <button onclick="start()">Start</button>
-         </header>
-         
-         <main>
-            <section id="quiz">
-                <h2 id="questions">Which of the following represents true or false in an array?</h2>
-                   <div id="answers">
-                   <button id="answer1">String</button>
-                   <button id="answer2">Booleans</button>
-                   <button id="answer3">Alerts</button>
-                   <button id="answer4">Numbers</button>
-                   </section>
-                   </main>
-                </div>
-                <section id="quiz">
-            <h2 id="questions">A very useful tool used during development and debugging for printing content to the debugger is</h2>
-           <div id="answers">
-           <button id="answer1">terminal/bash</button>
-           <button id="answer2">for loops</button>
-           <button id="answer3">console.log</button>
-           <button id="answer4">javascript</button>
-         </div>
-        </section>
-        <section id="quiz">
-        <h2 id="questions">String values must be enclosed within ___ when being assigned to variables.</h2>
-           <div id="answers">
-           <button id="answer1">Curly Brackets</button>
-           <button id="answer2">Commas</button>
-           <button id="answer3">Quotes</button>
-           <button id="answer4">Paraenthesis</button>
-           </section>
-        </div>
-        </main>
-    
-        <div id="timer">
-            <h3><span id="timer">80</span>seconds left</h3>
-            <button on click="start()">Start</button>
-        </div id="scores">
-        <h2>All Done</h2>
-        <h3 id="high-scores">High Scores</h3>
-     <div>
+  </head>
 
-     </div>
+  <body>
+    <div class="highscores">
+      <a href="highscores.html">View highscores</a>
+    </div>
+    <div class="timer">time: <span id="time">0</span></div>
+
+    <div id="startScreen" class="start">
+      <h1>Coding Quiz!</h1>
+      <p>Let's put your knowledge of coding to the test! Good luck!</p>
+      <button id="start">Start</button>
+    </div>
+    <div id="questions" class="hidden">
+      <h2 id="question-title"></h2>
+      <div id="choices" class="choices"></div>
+    </div>
+    <div class="hidden" id="end-screen">
+      <h2>All Done</h2>
+      <p>Your final score is <span id="final-score"></span></p>
+      <p>
+        Enter Initials: <input type="text" id="initials" />
+        <button id="submit">Submit</button>
+      </p>
+    </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
